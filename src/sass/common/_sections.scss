@@ -1,0 +1,6 @@
+.main {
+  flex-grow: 1;
+  @include phablet {
+    padding: 40px 20px;
+  }
+}

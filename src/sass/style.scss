@@ -1,0 +1,17 @@
+/* HELPERS, MIXINS, ANIMATIONS */
+@import 'helpers/all-helpers';
+@import 'mixins/all-mixins';
+@import 'animations/all-animations';
+
+/* COMMON STYLES */
+@import 'common/page';
+@import 'common/sections';
+
+/* COMPONENTS */
+@import 'components/header';
+@import 'components/footer';
+
+/* BLOCKS*/
+@import 'blocks/button';
+@import 'blocks/form';
+@import 'blocks/modal';
