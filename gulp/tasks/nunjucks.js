@@ -3,12 +3,13 @@ const config = require('../config');
 const nunjucks = require('gulp-nunjucks');
 const plumber = require('gulp-plumber');
 const replace = require('gulp-replace-task');
+const extReplace = require('gulp-ext-replace');
 const prettify = require('gulp-prettify');
 const server = require('./server');
 
 gulp.task('nunjucks', () => {
   gulp
-    .src(`${config.src.html}/[^_]*.html`)
+    .src(`${config.src.html}/[^_]*.*`)
     .pipe(plumber())
     .pipe(nunjucks.compile())
     .pipe(prettify({
@@ -17,12 +18,13 @@ gulp.task('nunjucks', () => {
       preserve_newlines: false,
       end_with_newline: true,
     }))
+    .pipe(extReplace('.html'))
     .pipe(plumber.stop())
     .pipe(gulp.dest(config.src.root));
 });
 
 gulp.task('nunjucks:watch', () => {
-  gulp.watch([`${config.src.html}/**/*.html`], ['nunjucks', server.reload]);
+  gulp.watch([`${config.src.html}/**/*.*`], ['nunjucks', server.reload]);
 });
 
 gulp.task('nunjucks:build', () => {

@@ -7,8 +7,8 @@ const config = {
     css: 'src/css',
     html: 'src/html',
     js: 'src/js',
-    jsEntry: 'src/js/modules/main.js',
-    img: 'src/img',
+    jsEntry: 'src/js/modules/app.js',
+    img: 'src/images',
     fonts: 'src/fonts',
   },
   dest: {
@@ -18,6 +18,7 @@ const config = {
     img: `${destPath}/images`,
     fonts: `${destPath}/fonts`,
   },
+  entry: 'index.html',
 };
 
 module.exports = config;
