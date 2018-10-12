@@ -1,4 +1,4 @@
-const destPath = 'docs';
+const destPath = 'dist';
 
 const config = {
   src: {

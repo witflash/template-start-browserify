@@ -351,8 +351,25 @@ body {
   background: -webkit-gradient(linear, left top, right bottom, from(#0099df), to(#79d5ff));
   background: linear-gradient(to right bottom, #0099df, #79d5ff); }
 
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh; }
+  .page__content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto; }
+
 /* COMPONENTS */
 .header {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   padding: 20px 10px;
   background-color: #182a53; }
   .header__title {
@@ -363,6 +380,9 @@ body {
     color: white; }
 
 .footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   padding: 6px 10px;
   background-color: #124fb3;
   color: white; }
@@ -375,64 +395,3 @@ body {
     font-size: 12px; }
 
 /* BLOCKS*/
-.modal {
-  position: fixed;
-  z-index: 9;
-  top: 0;
-  left: 0;
-  display: none;
-  width: 100%;
-  height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: rgba(0, 0, 0, 0.8); }
-  .modal__box {
-    position: relative;
-    max-width: 90%;
-    min-height: 100px;
-    padding: 10px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    background-color: white;
-    border-radius: 10px;
-    -webkit-animation: slide-top-to-bottom 1s;
-            animation: slide-top-to-bottom 1s; }
-    @media (min-width: 578px) {
-      .modal__box {
-        max-width: 400px; } }
-  .modal__content {
-    padding: 40px 20px 20px;
-    text-align: center; }
-  .modal__title {
-    margin: 0;
-    margin-bottom: 40px;
-    font-family: "Open Sans", sans-serif;
-    font-size: 24px; }
-  .modal__text {
-    margin: 0;
-    margin-bottom: 0.5em;
-    font-size: 16px; }
-  .modal__btn-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-    border: none;
-    background: none;
-    cursor: pointer; }
-    .modal__btn-close .btn-fill {
-      fill: #3f82f0;
-      -webkit-transition-duration: 300ms;
-              transition-duration: 300ms; }
-    .modal__btn-close:hover .btn-fill {
-      fill: #124fb3; }
-  .modal.isVisible {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }

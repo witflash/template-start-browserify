@@ -7,12 +7,14 @@ const server = require('./server');
 gulp.task('img', () => {
   gulp
     .src(`${config.src.img}/**/*`)
-    .pipe(imagemin({
-      interlaced: true,
-      progressive: true,
-      svgoPlugins: [{ removeViewBox: false }],
-      use: [pngquant()],
-    }))
+    .pipe(imagemin([
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.jpegtran({ progressive: true }),
+      imagemin.optipng({ optimizationLevel: 5 }),
+      imagemin.svgo({
+        plugins: [{ removeViewBox: false }, { cleanupIDs: false }],
+      }),
+    ]))
     .pipe(gulp.dest(config.dest.img));
 });
 
