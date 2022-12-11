@@ -1,5 +1,5 @@
 /*
   Project Name: Start Project
-  Author: Andrew Mambyk
-  Start Date: 25.05/18
+  Author: Andrii Mambyk
+  Last update: 09.12/22
  */

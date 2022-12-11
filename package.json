@@ -2,6 +2,13 @@
   "name": "template-project",
   "version": "1.2.0",
   "author": "WitFlash",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "engines": {
+    "node": "=10"
+  },
   "dependencies": {
     "ajv": "^6.2.1",
     "ajv-keywords": "^3.1.0",
@@ -21,7 +28,6 @@
     "gulp-replace-task": "^0.11.0",
     "gulp-sass": "^3.1.0",
     "gulp-uglifyjs": "^0.6.2",
-    "imagemin-pngquant": "^5.0.1",
     "require-dir": "^1.0.0",
     "vinyl-source-stream": "^2.0.0"
   },

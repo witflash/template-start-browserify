@@ -1,7 +1,6 @@
 const gulp = require('gulp');
 const config = require('../config');
 const imagemin = require('gulp-imagemin');
-const pngquant = require('imagemin-pngquant');
 const server = require('./server');
 
 gulp.task('img', () => {
